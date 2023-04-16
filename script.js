@@ -43,14 +43,11 @@ function setMoonData(x,y){
       opacity=Math.max(400-offset,0)/1000,
       expOverlap=Math.pow(overlap,4);
   
-  //Bling bling
   moon.style.boxShadow="inset "+(x-window.innerWidth/2)/10+"px "+(y-window.innerHeight/2)/10+"px 50px rgba(255, 255, 119, "+opacity+")";
   moon.style.background="hsl(194, 56%, "+(1-expOverlap)*60+"%)";
   perc.innerHTML="Volume: "+(overlap*100).toPrecision(4)+"%";
   document.body.style.background="hsl("+(194+Math.floor(166*expOverlap))+", 66%, "+(1-expOverlap)*50+"%)";
   
-  //set the volume
-  audio.volume=overlap;
 }
 
 function dropMoon(){
